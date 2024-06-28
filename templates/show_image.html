@@ -1,0 +1,39 @@
+{% include "header.html" %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col-lg-6 col-md-6 mx-auto">
+        <h3>Your Image</h3>
+        <img class="image" src="{{ image_path }}" alt="Something went wrong, please try again">
+
+        <form name="Number-of-Colors" action="" method="POST">
+            <label>How many colors do you want to extract?</label>
+                <select name="amount" class="Input">
+                      {% for number in range(1, 11): %}
+                      <option value="{{ number }}">{{ number }}</option>
+                      {% endfor %}
+                </select>
+            <input type="submit" value ="OK">
+        </form>
+        <a class="btn btn-primary" href="{{ url_for('upload') }}">Upload new Image</a>
+    </div>
+
+{% if palette: %}
+    <div class="col-lg-6 col-md-6 mx-auto">
+        <h3> Your Color Palette in RGB</h3>
+        <div class="row">
+        {% for color in colors %}
+        <div class="col-lg-4 col-md-4 mx-auto">
+                <div class="card">
+                    <div class="card-body" style="background-color:rgb{{ color }}">
+                        <h5 class="card-title" style="background-color:rgb{{ color }}">{{ color }}</h5>
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endif %}
+</div>
+</div>
+<br>
+{% include "footer.html" %}
