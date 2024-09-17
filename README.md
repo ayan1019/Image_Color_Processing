@@ -1,7 +1,7 @@
 
 #  Image Color Processing
 
-It's a static website that shows a bunch of colours and their HEX codes. You can copy the HEX codes and use it in any CSS or design software. Uses Numoy for Image Processing.
+It's a static website that shows a bunch of colours and their HEX codes. You can copy the HEX codes and use it in any CSS or design software. Uses Numpy for Image Processing.
 
 
 
