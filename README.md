@@ -44,6 +44,7 @@ pip3 install -r requirements.txt
 
 - Python
 - Numpy
+- Sklearn
 - Image Processing
 - Flask
 - SQL
